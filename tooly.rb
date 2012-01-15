@@ -62,6 +62,15 @@ bot = Cinch::Bot.new do
 	  m.reply "Now ignoring: #{ignorelist}"
   end
   
+  on :message, /\$help (.*)/ do |m,text|
+    if text.include? "unignore"
+      m.reply "unignore URL: removes URL from the ignore list"
+    elsif text.include? "ignore"
+      m.reply "ignore URL: adds URL to the ignore list"
+    else
+      m.reply "available commands: ignore unignore"
+    end
+
 end
 
 bot.start
