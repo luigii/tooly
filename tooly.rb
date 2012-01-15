@@ -70,6 +70,7 @@ bot = Cinch::Bot.new do
     else
       m.reply "available commands: ignore unignore"
     end
+  end
 
 end
 
